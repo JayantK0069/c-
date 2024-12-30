@@ -3,7 +3,7 @@ using namespace std;
 
 double divide(int numerator, int denominator) {
     if (denominator == 0) {
-        throw a("Division by zero is not allowed!"); // Throw an exception
+        throw runtime_error("Division by zero is not allowed!"); // Throw an exception
     }
     return static_cast<double>(numerator) / denominator;
 }
@@ -18,9 +18,9 @@ int main() {
     cin >> denom;
 
     try {
-        double result = divide(num, denom); // Call the function
+        double result = divide(num, denom); 
         cout << "Result: " << result << endl;
-    } catch (const a& e) { // Catch the exception
+    } catch (const runtime_error& e) { 
         cout << "Error: " << e.what() << endl;
     }
 
